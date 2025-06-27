@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+</head>
+<body>
+    <script>
+        const nome = prompt('Digite seu nome completo:');
+        let semEsp = nome.replace(/ /g, '');
+        let nroLetras = semEsp.length;
+        let maiusc = nome.toUpperCase();
+        let segLetra = maiusc[1];
+        let primeiroA = maiusc.indexOf('A');
+        let ultimoA = maiusc.lastIndexOf('A');
+        let minusc = nome.toLowerCase();
+        let ultTres = minusc.slice(-3);
+        let palavras = nome.split(' ');
+
+        document.body.innerHTML += `O seu nome é ${nome}<br>`;
+        document.body.innerHTML += `Seu nome tem ${nroLetras} letras<br>`;
+        document.body.innerHTML += `A segunda letra do seu nome é: ${segLetra}<br>`;
+        document.body.innerHTML += `O primeiro índice da letra A no seu nome é ${primeiroA}<br>`;
+        document.body.innerHTML += `O último índice da letra A no seu nome é ${ultimoA}<br>`;
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: ${ultTres}<br>`;
+        document.body.innerHTML += `Seu nome tem ${palavras} palavras<br>`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: ${minusc} <br>`;
+        document.body.innerHTML += `Seu nome com letras minúsculas: ${maiusc} <br>`;
+    </script>
+</body>
+</html>
