@@ -15,18 +15,19 @@
         let primeiroA = maiusc.indexOf('A');
         let ultimoA = maiusc.lastIndexOf('A');
         let minusc = nome.toLowerCase();
-        let ultTres = minusc.slice(-3);
+        let ultTres = nome.slice(-3);
         let palavras = nome.split(' ');
+        
 
-        document.body.innerHTML += `O seu nome é ${nome}<br>`;
+        document.body.innerHTML += `O seu nome é <strong>${nome}</strong><br>`;
         document.body.innerHTML += `Seu nome tem ${nroLetras} letras<br>`;
         document.body.innerHTML += `A segunda letra do seu nome é: ${segLetra}<br>`;
         document.body.innerHTML += `O primeiro índice da letra A no seu nome é ${primeiroA}<br>`;
         document.body.innerHTML += `O último índice da letra A no seu nome é ${ultimoA}<br>`;
         document.body.innerHTML += `As últimas 3 letras do seu nome são: ${ultTres}<br>`;
-        document.body.innerHTML += `Seu nome tem ${palavras} palavras<br>`;
-        document.body.innerHTML += `Seu nome com letras maiúsculas: ${minusc} <br>`;
-        document.body.innerHTML += `Seu nome com letras minúsculas: ${maiusc} <br>`;
+        document.body.innerHTML += `As palavras do seu nome são: ${palavras}<br>`;
+        document.body.innerHTML += `Seu nome com letras minúsculas: ${minusc} <br>`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: ${maiusc} <br>`;
     </script>
 </body>
 </html>
