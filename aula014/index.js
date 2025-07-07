@@ -1,4 +1,4 @@
-//               0123456789
-let umaString = "Um exemplo";
+let num1 = 1;
+let num2 = 1.4;
 
-console.log(umaString.charAt(4));
+console.log(num1.toString() + num2);
