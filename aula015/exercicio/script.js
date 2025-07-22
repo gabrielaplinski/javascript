@@ -1,18 +1,13 @@
-const num = prompt('Digite um número:');
+const num = Number(prompt('Digite um número:'));
+const numeroTitulo = document.getElementById('numero-titulo');
+const texto = document.getElementById('texto');
 
-        const num1 = Number(num); 
 
-        let inteiro = Number.isInteger(num1);
-        let rq = Math.pow(num1, 0.5);
-        let eNan = Number.isNaN(num1);
-        let rMax = Math.ceil(num1);
-        let rMin = Math.floor(num1);
-        let deci = num1.toFixed(2);
-
-        document.body.innerHTML += `<h1>Seu número é ${num}</h1><br>`;
-        document.body.innerHTML += `${num1} é inteiro: ${inteiro}<br>`;
-        document.body.innerHTML += `Raiz quadrada: ${rq}<br>`;
-        document.body.innerHTML += `É NaN: ${eNan}<br>`;
-        document.body.innerHTML += `Arredondado para baixo: ${rMin}<br>`;
-        document.body.innerHTML += `Arredondado para cima: ${rMax}<br>`;
-        document.body.innerHTML += `Com duas casas decimais: ${deci}<br>`;
+numeroTitulo.innerHTML = num;
+texto.innerHTML += `Seu número +2 é ${num + 2}<br>`;
+texto.innerHTML += `${num} é inteiro: ${Number.isInteger(num)}<br>`;
+texto.innerHTML += `Raiz quadrada: ${num ** 0.5}<br>`;
+texto.innerHTML += `É NaN: ${Number.isNaN(num)}<br>`;
+texto.innerHTML += `Arredondado para baixo: ${Math.floor(num)}<br>`;
+texto.innerHTML += `Arredondado para cima: ${Math.ceil(num)}<br>`;
+texto.innerHTML += `Com duas casas decimais: ${num.toFixed(2)}<br>`;
