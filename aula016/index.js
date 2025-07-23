@@ -9,7 +9,7 @@ alunas.unshift('Brisa');
 alunas.unshift('Raphis');
 // alunas.pop(); --- Tira o último item da array
 alunas.shift();
-delete alunas[3];
+delete alunas[4];
 console.log(alunas);
 
 //console.log(alunas[5]);
