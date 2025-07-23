@@ -5,7 +5,11 @@ alunas[5] = 'Mojito';
 // alunas[alunos.length] = 'Farelo'; =
 alunas.push('Farelo');
 alunas.push('Trevor');
-alunas.push('Brisa');
+alunas.unshift('Brisa');
+alunas.unshift('Raphis');
+// alunas.pop(); --- Tira o último item da array
+alunas.shift();
+delete alunas[3];
 console.log(alunas);
 
 //console.log(alunas[5]);
