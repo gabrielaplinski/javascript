@@ -6,4 +6,4 @@ exemplo.nome = "Gabriela"; // Abre a caixa #123 e troca o seu conteúdo
 
 exemplo = { nome: "Rafael" }; // exemplo passa a apontar para uma nova caixa. A antiga continua existindo.
 
-console.log(exemplo);
+console.log(exemplo);  
