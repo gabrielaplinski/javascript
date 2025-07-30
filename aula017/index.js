@@ -14,7 +14,7 @@ console.log(variavel); */
     return resultado;
 } */
 
-const soma = x, y => x + y;
+const soma = (x, y) => x + y;
 
 /* console.log(soma(2, 6));
 console.log(soma(8, 5));
