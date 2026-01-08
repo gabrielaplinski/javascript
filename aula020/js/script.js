@@ -20,7 +20,7 @@ function Exemplo () {
         const altura = form.querySelector('.altura');
 
         console.log(nome.value, sobrenome.value, peso.value, altura.value);
-
+        
         pessoas.push({
             nome: nome.value,
             sobrenome: sobrenome.value,
