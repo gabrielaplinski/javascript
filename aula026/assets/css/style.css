@@ -39,6 +39,11 @@ h1 {
     padding: 20px 0;
 }
 
+table {
+    border-spacing: 10px;
+    text-align: left;
+}
+
 form input, form label, form button {
     display: block;
     width: 100%;
@@ -68,4 +73,10 @@ form button {
 
 form button:hover {
     background-color: var(--color2);
+}
+
+.p-resultado {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 128, 58);
 }
