@@ -25,9 +25,8 @@ form.addEventListener('submit', function (e) {
 
 /*const peso = document.getElementById('#peso');
 const altura = document.getElementById('#altura');
-const imc = peso / (altura * altura);
+const imc = peso / (altura * altura);*/
 
-console.log(imc);*/
 function getImc () {
     
 }
