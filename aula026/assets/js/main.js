@@ -6,6 +6,7 @@ form.addEventListener('submit', function (e) {
     const inputPeso = e.target.querySelector('#peso');
     const inputAltura = e.target.querySelector('#altura');
 
+    //transforma em number
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
 
@@ -20,15 +21,29 @@ form.addEventListener('submit', function (e) {
     }
 
     const imc = getImc(peso, altura);
-    console.log('Cheguei');
-})
+    const paramImc = parametrosImc(imc);
+    const msg = `Seu IMC é ${imc} (${paramImc})`
 
-/*const peso = document.getElementById('#peso');
-const altura = document.getElementById('#altura');
-const imc = peso / (altura * altura);*/
+    setResultado(msg, true);
+});
 
-function getImc () {
-    
+// estabelecendo os parâmetros IMC
+
+function parametrosImc (imc) {
+    const parametro = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 1'];
+
+    if (imc >= 39.9) return parametro[5];
+    if (imc >= 34.9) return parametro[4];
+    if (imc >= 29.9) return parametro[3];
+    if (imc >= 24.9) return parametro[2];
+    if (imc >= 18.5) return parametro[1];
+    if (imc < 18.5) return parametro[0];
+}
+
+//função para calcular o IMC
+function getImc (peso, altura) {
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
 }
 
 //criação de parágrafos
@@ -45,6 +60,13 @@ function setResultado (texto, isValid) {
     resultado.innerHTML = '';
 
     const p = criaPar();
+
+    if (isValid) {
+        p.classList.add('p-resultado');
+    } else {
+        p.classList.add('bad');
+    }
+
     p.innerHTML = texto;
     resultado.appendChild(p);
 }
